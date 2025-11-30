@@ -10,7 +10,8 @@ export const getButtonLinkStyles = (
   variant: ButtonVariant | LinkVariant,
   size: ButtonSize | LinkSize,
   state: ButtonState | LinkState,
-  iconPosition: ButtonIconPosition | LinkIconPosition
+  iconPosition: ButtonIconPosition | LinkIconPosition,
+  fontWeight?: number | string
 ): React.CSSProperties => {
   const isDisabled = state === 'disabled';
   const isPressed = state === 'pressed';
@@ -20,7 +21,7 @@ export const getButtonLinkStyles = (
   // Base styles
   const baseStyles: React.CSSProperties = {
     fontFamily: 'var(--font-dm-sans), DM Sans, sans-serif',
-    fontWeight: 700, // Bold
+    fontWeight: fontWeight || 700, // Bold (default) or custom
     borderRadius: '12px',
     border: 'none',
     cursor: isDisabled ? 'not-allowed' : 'pointer',
@@ -110,6 +111,10 @@ export const getButtonLinkStyles = (
   } else {
     // tertiary
     baseStyles.backgroundColor = 'transparent';
+    // Use custom fontWeight if provided, otherwise default to 500 for tertiary
+    if (!fontWeight) {
+      baseStyles.fontWeight = 500; // Label/Large Bold uses 500
+    }
 
     if (isDisabled) {
       baseStyles.color = 'var(--color-neutral-200, #C3C3C3)';

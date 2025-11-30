@@ -42,6 +42,10 @@ export interface ButtonProps
    * Custom icon component
    */
   icon?: React.ReactNode;
+  /**
+   * Font weight (400, 500, 700, etc.)
+   */
+  fontWeight?: number | string;
 }
 
 // Styles are now shared via buttonStyles.ts
@@ -55,12 +59,13 @@ export const Button = ({
   className = '',
   disabled = false,
   icon,
+  fontWeight,
   ...props
 }: ButtonProps) => {
   // Override state if disabled prop is true
   const actualState = disabled ? 'disabled' : state;
 
-  const styles = getButtonLinkStyles(variant, size, actualState, iconPosition);
+  const styles = getButtonLinkStyles(variant, size, actualState, iconPosition, fontWeight);
 
   // Icon size: 20px if text exists, 28px if icon only (for all sizes)
   const getIconSize = () => {
