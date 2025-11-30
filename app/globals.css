@@ -10,6 +10,76 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Soprano Blue */
+  --color-blue-50: #e9effd;
+  --color-blue-100: #d3dffb;
+  --color-blue-200: #a7bff7;
+  --color-blue-300: #7b9ff3;
+  --color-blue-400: #4f7fef;
+  --color-blue-500: #235feb;
+  --color-blue-600: #1c4fbc;
+  --color-blue-700: #153f8d;
+  --color-blue-800: #0e2f5e;
+  --color-blue-900: #071f2f;
+
+  /* Green */
+  --color-green-50: #e8f5ed;
+  --color-green-100: #d1ebdb;
+  --color-green-200: #a3d7b7;
+  --color-green-300: #75c393;
+  --color-green-400: #47af6f;
+  --color-green-500: #1eae4f;
+  --color-green-600: #188b3f;
+  --color-green-700: #12682f;
+  --color-green-800: #0c451f;
+  --color-green-900: #06220f;
+
+  /* Red */
+  --color-red-50: #fde9eb;
+  --color-red-100: #fbd3d7;
+  --color-red-200: #f7a7af;
+  --color-red-300: #f37b87;
+  --color-red-400: #ef4f5f;
+  --color-red-500: #ec1f33;
+  --color-red-600: #bc1929;
+  --color-red-700: #8d131f;
+  --color-red-800: #5e0c14;
+  --color-red-900: #2f060a;
+
+  /* Yellow */
+  --color-yellow-50: #fff8e8;
+  --color-yellow-100: #fff1d1;
+  --color-yellow-200: #ffe3a3;
+  --color-yellow-300: #ffd575;
+  --color-yellow-400: #ffc747;
+  --color-yellow-500: #fdb718;
+  --color-yellow-600: #ca9213;
+  --color-yellow-700: #986e0e;
+  --color-yellow-800: #65490a;
+  --color-yellow-900: #332505;
+
+  /* Neutral */
+  --color-neutral-50: #f5f5f5;
+  --color-neutral-100: #ebebeb;
+  --color-neutral-200: #d7d7d7;
+  --color-neutral-300: #c3c3c3;
+  --color-neutral-400: #afafaf;
+  --color-neutral-500: #9b9b9b;
+  --color-neutral-600: #7c7c7c;
+  --color-neutral-700: #5d5d5d;
+  --color-neutral-800: #3e3e3e;
+  --color-neutral-900: #0f0f0f;
+
+  /* Supportive Colors */
+  --color-supportive-dark-green: #0d4f2d;
+  --color-supportive-bright-green: #2dd573;
+  --color-supportive-light-green: #7feb9f;
+  --color-supportive-orange: #ff6b35;
+  --color-supportive-peach: #ffb3a7;
+  --color-supportive-purple: #8b5cf6;
+  --color-supportive-dark-blue: #1e3a8a;
+  --color-supportive-indigo: #4f46e5;
 }
 
 @media (prefers-color-scheme: dark) {
