@@ -36,6 +36,10 @@ export interface TextProps {
    * HTML tag to render
    */
   as?: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'div';
+  /**
+   * Additional inline styles
+   */
+  style?: React.CSSProperties;
 }
 
 const variantStyles: Record<TextVariant, React.CSSProperties> = {
@@ -191,9 +195,22 @@ export const Text = ({
   children,
   className = '',
   as,
+  style: customStyle,
 }: TextProps) => {
-  const Tag = as || getDefaultTag(variant);
-  const style = variantStyles[variant];
+  const Tag = (as || getDefaultTag(variant)) as React.ElementType;
+  const variantStyle = variantStyles[variant];
+  
+  // Remove color from variant style if customStyle has color or className has color classes
+  const { color, ...variantStyleWithoutColor } = variantStyle;
+  const hasColorInCustomStyle = customStyle?.color !== undefined;
+  const hasColorInClassName = className.includes('text-');
+  
+  // Only apply variant color if no custom color is provided
+  const finalVariantStyle = hasColorInCustomStyle || hasColorInClassName 
+    ? variantStyleWithoutColor 
+    : variantStyle;
+  
+  const style = customStyle ? { ...finalVariantStyle, ...customStyle } : finalVariantStyle;
 
   return (
     <Tag className={className} style={style}>
