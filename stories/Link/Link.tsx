@@ -59,6 +59,10 @@ export interface LinkProps {
    * Additional props for anchor tag
    */
   anchorProps?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+  /**
+   * Font weight (400, 500, 700, etc.)
+   */
+  fontWeight?: number | string;
 }
 
 export const Link = ({
@@ -74,11 +78,12 @@ export const Link = ({
   useNextLink = true,
   nextLinkProps,
   anchorProps,
+  fontWeight,
 }: LinkProps) => {
   // Override state if disabled prop is true
   const actualState = disabled ? 'disabled' : state;
 
-  const styles = getButtonLinkStyles(variant, size, actualState, iconPosition);
+  const styles = getButtonLinkStyles(variant, size, actualState, iconPosition, fontWeight);
 
   // Icon size: 20px if text exists, 28px if icon only (for all sizes)
   const getIconSize = () => {
@@ -139,14 +144,24 @@ export const Link = ({
   // Use Next.js Link or regular anchor
   if (useNextLink) {
     return (
-      <NextLink href={href} style={styles} className={className} {...nextLinkProps}>
+      <NextLink
+        href={href}
+        style={styles}
+        className={className}
+        {...nextLinkProps}
+      >
         {renderContent()}
       </NextLink>
     );
   }
 
   return (
-    <a href={href} style={styles} className={className} {...anchorProps}>
+    <a
+      href={href}
+      style={styles}
+      className={className}
+      {...anchorProps}
+    >
       {renderContent()}
     </a>
   );
