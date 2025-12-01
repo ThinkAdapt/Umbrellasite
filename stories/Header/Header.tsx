@@ -34,8 +34,6 @@ export const Header = ({
   const navItems = [
     { id: 'overview', label: 'Overview', href: '/overview' },
     { id: 'products', label: 'Products', href: '/products' },
-    { id: 'pricing', label: 'Pricing', href: '/pricing' },
-    { id: 'company', label: 'Company', href: '/company' },
   ];
 
   const toggleMobileMenu = () => {
