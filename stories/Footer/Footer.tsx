@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Logo } from '@/stories/icons';
 import { Text } from '@/stories/Text';

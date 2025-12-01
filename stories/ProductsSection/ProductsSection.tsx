@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Text } from '@/stories/Text';
 import productsSection1 from '@/stories/assets/products-section-1.png';

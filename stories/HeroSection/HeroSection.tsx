@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { StageReadyIcon, TeamSenseIcon, KnowledgeBaseIcon } from '@/stories/icons';
 import { Text } from '@/stories/Text';
@@ -56,8 +58,8 @@ export const HeroSection = ({
         </div>
       </section>
 
-      <section className="relative">
-        <div className="absolute grid grid-cols-1 md:grid-cols-3 gap-6 z-0">
+      <section className="relative overflow-hidden md:min-h-[37.5rem] min-h-[20rem]">
+        <div className="hidden md:grid absolute grid-cols-1 md:grid-cols-3 gap-6 z-0 pointer-events-none">
           <div></div>
           <div
             className="relative overflow-hidden mt-16 w-[28rem] h-[18.5rem] bg-no-repeat"
@@ -70,23 +72,23 @@ export const HeroSection = ({
           <div></div>
         </div>
         <div
-          className="absolute overflow-hidden z-0 w-[22.75rem] h-[18rem] -left-5 -top-[3.125rem] bg-cover bg-center bg-no-repeat"
+          className="hidden md:block absolute overflow-hidden z-0 w-[22.75rem] h-[18rem] -left-5 -top-[3.125rem] bg-cover bg-center bg-no-repeat pointer-events-none"
           style={{
             backgroundImage: `url(${heroImage1.src || heroImage1})`,
             }}
-          />
+        />
         <div
-          className="absolute overflow-hidden z-0 w-[26.25rem] h-[17.5rem] -right-5 -top-[6.25rem] bg-cover bg-center bg-no-repeat"
+          className="hidden md:block absolute overflow-hidden z-0 w-[26.25rem] h-[17.5rem] -right-5 -top-[6.25rem] bg-cover bg-center bg-no-repeat pointer-events-none"
           style={{
             backgroundImage: `url(${heroImage3.src || heroImage3})`,
           }}
         />
 
-        <div className="container mx-auto relative z-20 h-fit">
-          <div className="flex justify-between items-end">
-          <div>
+        <div className="container mx-auto relative z-20 h-fit px-4 md:px-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-0">
+          <div className="w-full md:w-auto">
             <div
-              className="flex w-[21rem] p-2 items-center gap-2 rounded-xl border border-[#00027F] mb-2 backdrop-blur-[10px]"
+              className="flex w-full md:w-[21rem] p-2 items-center gap-2 rounded-xl border border-[#00027F] mb-2 backdrop-blur-[10px]"
               style={{
                 background:
                   'linear-gradient(0deg, rgba(230, 230, 242, 0.35) 0%, rgba(230, 230, 242, 0.35) 100%), rgba(250, 250, 250, 0.50)',
@@ -119,7 +121,7 @@ export const HeroSection = ({
             </div>
 
             <div
-              className="flex w-[21rem] p-2 items-center gap-2 rounded-xl border border-[#F46429] ml-20 backdrop-blur-[10px]"
+              className="flex w-full md:w-[21rem] p-2 items-center gap-2 rounded-xl border border-[#F46429] md:ml-20 ml-0 backdrop-blur-[10px]"
               style={{
                 background:
                   'linear-gradient(0deg, rgba(254, 240, 234, 0.35) 0%, rgba(254, 240, 234, 0.35) 100%), rgba(250, 250, 250, 0.50)',
@@ -152,9 +154,9 @@ export const HeroSection = ({
             </div>
           </div>
 
-          <div>
+          <div className="w-full md:w-auto">
             <div
-              className="flex w-[21rem] p-2 items-center gap-2 rounded-xl border border-[#05D648] mr-40 mb-40 backdrop-blur-[10px]"
+              className="flex w-full md:w-[21rem] p-2 items-center gap-2 rounded-xl border border-[#05D648] md:mr-40 md:mb-40 mr-0 mb-0 backdrop-blur-[10px]"
               style={{
                 background:
                   'linear-gradient(0deg, rgba(230, 251, 237, 0.20) 0%, rgba(230, 251, 237, 0.20) 100%), rgba(250, 250, 250, 0.50)',
