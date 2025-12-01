@@ -74,12 +74,15 @@
 
   /* Supportive Colors */
   --color-supportive-dark-green: #0d4f2d;
+  --color-supportive-dark-green-500: #003024;
   --color-supportive-bright-green: #2dd573;
   --color-supportive-light-green: #7feb9f;
   --color-supportive-orange: #ff6b35;
+  --color-supportive-orange-500: #F46429;
   --color-supportive-peach: #ffb3a7;
   --color-supportive-purple: #8b5cf6;
   --color-supportive-dark-blue: #1e3a8a;
+  --color-supportive-navy-500: #00027F;
   --color-supportive-indigo: #4f46e5;
 
   /* Accent Colors */
@@ -119,5 +122,14 @@ body {
   }
   100% {
     transform: translateY(-50%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
   }
 }
