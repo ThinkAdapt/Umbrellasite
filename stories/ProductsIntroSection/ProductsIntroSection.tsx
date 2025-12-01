@@ -38,7 +38,7 @@ export const ProductsIntroSection = ({ onAction }: ProductsIntroSectionProps) =>
         </div>
 
         {/* Images Section */}
-        <div className="flex gap-6 items-end">
+        <div className="flex gap-6 items-end justify-center mx-auto">
           <div 
             className="rounded-lg overflow-hidden"
             style={{ width: '592px', height: '424px' }}
