@@ -16,4 +16,8 @@ export { CheckIcon } from './CheckIcon';
 export type { CheckIconProps } from './CheckIcon';
 export { ArrowRightIcon } from './ArrowRightIcon';
 export type { ArrowRightIconProps } from './ArrowRightIcon';
+export { CheckCircle } from './CheckCircle';
+export type { CheckCircleProps } from './CheckCircle';
+export { TimesRegular } from './TimesRegular';
+export type { TimesRegularProps } from './TimesRegular';
 
