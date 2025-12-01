@@ -12,4 +12,8 @@ export { MenuIcon } from './MenuIcon';
 export type { MenuIconProps } from './MenuIcon';
 export { CloseIcon } from './CloseIcon';
 export type { CloseIconProps } from './CloseIcon';
+export { CheckIcon } from './CheckIcon';
+export type { CheckIconProps } from './CheckIcon';
+export { ArrowRightIcon } from './ArrowRightIcon';
+export type { ArrowRightIconProps } from './ArrowRightIcon';
 
