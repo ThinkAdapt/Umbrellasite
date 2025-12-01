@@ -283,7 +283,7 @@ export const ProductsSection = ({
                   >
                     {product.description}
                   </Text>
-                  <div className="h-[500px] overflow-hidden rounded-lg mt-auto">
+                  <div className="h-[500px] overflow-hidden rounded-lg mt-auto flex items-center justify-center">
                     <img
                       src={typeof image === 'string' ? image : image.src}
                       alt={product.title}
