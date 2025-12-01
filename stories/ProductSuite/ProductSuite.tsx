@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Text } from '@/stories/Text';
-import { Button } from '@/stories/Button';
+import { Link } from '@/stories/Link';
 import { CheckIcon, ArrowRightIcon, TeamSenseIcon, StageReadyIcon } from '@/stories/icons';
 
 export interface ProductSuiteProps {
@@ -26,6 +26,7 @@ const products = [
     ],
     imagePosition: 'right' as const,
     gradient: 'from-orange-200 to-pink-200',
+    learnMoreUrl: 'https://corporate-website-72vqqxkum-zeyneptekiins-projects.vercel.app/',
   },
   {
     id: 'stageready',
@@ -39,6 +40,7 @@ const products = [
     ],
     imagePosition: 'left' as const,
     gradient: 'from-blue-200 to-purple-200',
+    learnMoreUrl: undefined,
   },
 ];
 
@@ -110,17 +112,29 @@ export const ProductSuite = ({ onLearnMoreClick }: ProductSuiteProps) => {
                   ))}
                 </ul>
                 <div className="flex justify-end">
-                  <Button
+                  <Link
+                    href={product.learnMoreUrl || '#'}
                     variant="secondary"
                     size="large"
                     iconPosition="right"
                     state="active"
                     fontWeight={500}
                     icon={<ArrowRightIcon />}
-                    onClick={() => onLearnMoreClick?.(product.id)}
+                    useNextLink={false}
+                    anchorProps={{
+                      ...(product.learnMoreUrl 
+                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        : {
+                            onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
+                              e.preventDefault();
+                              onLearnMoreClick?.(product.id);
+                            }
+                          }
+                      )
+                    }}
                   >
                     Learn More
-                  </Button>
+                  </Link>
                 </div>
               </div>
 
