@@ -21,7 +21,7 @@ export const ProductsNav = ({ onProductClick }: ProductsNavProps) => {
   const duplicatedProducts = [...products, ...products, ...products];
 
   return (
-    <section className="w-full bg-white py-8 overflow-hidden">
+    <section className="w-full bg-white py-28 pb-38 overflow-hidden">
       <div className="flex" style={{
         gap: '100px',
         animation: 'scroll-left 20s linear infinite',
