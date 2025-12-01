@@ -58,7 +58,7 @@ export const HeroSection = ({
         </div>
       </section>
 
-      <section className="relative overflow-hidden md:min-h-[37.5rem] min-h-[20rem]">
+      <section className="relative overflow-hidden min-h-[20rem]">
         <div className="hidden md:grid absolute grid-cols-1 md:grid-cols-3 gap-6 z-0 pointer-events-none">
           <div></div>
           <div
