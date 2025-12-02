@@ -26,7 +26,7 @@ const products = [
     ],
     imagePosition: 'right' as const,
     gradient: 'from-orange-200 to-pink-200',
-    learnMoreUrl: 'https://corporate-website-72vqqxkum-zeyneptekiins-projects.vercel.app/',
+    learnMoreUrl: 'https://corporate-website-five-silk.vercel.app',
   },
   {
     id: 'stageready',
@@ -40,7 +40,7 @@ const products = [
     ],
     imagePosition: 'left' as const,
     gradient: 'from-blue-200 to-purple-200',
-    learnMoreUrl: undefined,
+    learnMoreUrl: 'https://stage-ready.vercel.app/',
   },
 ];
 

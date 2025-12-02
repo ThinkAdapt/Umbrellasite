@@ -11,20 +11,20 @@ export interface ProductsIntroSectionProps {
 
 export const ProductsIntroSection = ({ onAction }: ProductsIntroSectionProps) => {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-white dark:bg-white">
       <div className="container mx-auto pt-10">
         <div className="text-center mb-10">
           <Text
             variant="title3"
             as="p"
-            className="text-center uppercase mb-2"
+            className="text-center uppercase mb-2 text-black dark:text-black"
           >
             PRODUCTS
           </Text>
           <Text
             variant="display1"
             as="h1"
-            className="text-center mb-6"
+            className="text-center mb-6 text-black dark:text-black"
           >
             Helpful Products built for you.
           </Text>
