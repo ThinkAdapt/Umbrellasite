@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { Header } from '@/stories/Header';
 import { HeroSection } from '@/stories/HeroSection';
 import { TrustedBy } from '@/stories/TrustedBy';
@@ -15,7 +14,6 @@ import { Footer } from '@/stories/Footer';
 import { ContactModal } from '@/stories/ContactModal';
 
 export default function Overview() {
-  const router = useRouter();
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const contactModalContent = {
@@ -30,10 +28,9 @@ export default function Overview() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header activeItem="overview" onContactUsClick={() => setIsContactModalOpen(true)} />
+      <Header onContactUsClick={() => setIsContactModalOpen(true)} />
       <HeroSection 
         onContactUsClick={() => setIsContactModalOpen(true)} 
-        onExploreProductsClick={() => router.push('/products')}
       />
       <FeaturesSection />
       <ProductsSection />

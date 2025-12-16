@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { Logo, MenuIcon, CloseIcon } from '@/stories/icons';
-import { Link } from '@/stories/Link';
 import { Button } from '@/stories/Button';
 
 export interface HeaderProps {
@@ -25,16 +24,11 @@ export interface HeaderProps {
 }
 
 export const Header = ({
-  activeItem = 'products',
   profileImageUrl,
   userName,
   onContactUsClick,
 }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navItems = [
-    { id: 'overview', label: 'Overview', href: '/overview' },
-    { id: 'products', label: 'Products', href: '/products' },
-  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -47,30 +41,10 @@ export const Header = ({
         <div className="mx-auto px-6 container">
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-between">
-            {/* Left side: Logo and Navigation */}
+            {/* Left side: Logo */}
             <div className="flex items-center gap-4">
               {/* Logo */}
               <Logo width={46} height={28} />
-
-              {/* Navigation Items */}
-              <div className="flex items-center gap-2">
-                {navItems.map((item) => {
-                  const isActive = activeItem === item.id;
-                  return (
-                    <Link
-                      key={item.id}
-                      href={item.href}
-                      variant="tertiary"
-                      size="small"
-                      iconPosition="none"
-                      state={isActive ? 'focused' : 'active'}
-                      useNextLink={false}
-                    >
-                      {item.label}
-                    </Link>
-                  );
-                })}
-              </div>
             </div>
 
             {/* Right side: Contact Us */}
@@ -114,30 +88,9 @@ export const Header = ({
 
           {/* Mobile Menu (Expanded) */}
           {isMobileMenuOpen && (
-            <div className="md:hidden mt-6 pb-4 border-t border-neutral-200 flex flex-col min-h-[calc(100vh-120px)]">
-              {/* Mobile Navigation Links */}
-              <div className="flex flex-col gap-4 mt-4">
-                {navItems.map((item) => {
-                  const isActive = activeItem === item.id;
-                  return (
-                    <Link
-                      key={item.id}
-                      href={item.href}
-                      variant="tertiary"
-                      size="small"
-                      iconPosition="none"
-                      state={isActive ? 'focused' : 'active'}
-                      useNextLink={false}
-                      anchorProps={{ onClick: toggleMobileMenu }}
-                    >
-                      {item.label}
-                    </Link>
-                  );
-                })}
-              </div>
-
-              {/* Mobile Contact Us Button - Centered at bottom */}
-              <div className="mt-auto flex justify-center pt-6">
+            <div className="md:hidden fixed inset-0 top-[120px] bg-white z-50 w-screen">
+              {/* Mobile Contact Us Button - At top, centered */}
+              <div className="flex justify-center pt-6 px-6">
                 <Button
                   variant="primary"
                   size="small"

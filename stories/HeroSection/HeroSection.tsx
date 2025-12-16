@@ -29,9 +29,7 @@ export const HeroSection = ({
           className="max-w-[50rem] mx-auto mb-8"
           style={{ color: 'var(--color-neutral-700, #3A3A3A)' }}
         >
-          SopranoAI is a next-generation HR suite powered by AI. It helps your
-          employees stay productive, motivated, and engaged — while giving
-          leaders clear insights to build a stronger workplace.
+          SopranoAI is a next-generation HR suite powered by AI. It helps your employees stay productive, motivated, and engaged — while giving leaders clear insights to build a stronger workplace.
         </Text>
 
         <div className="flex items-center justify-center gap-4">
@@ -108,14 +106,12 @@ export const HeroSection = ({
                 <Text
                   variant="title3"
                   as="h3"
-                  className="mb-2"
                   style={{ color: 'var(--color-neutral-900, #0F0F0F)' }}
                 >
                   StageReady
                 </Text>
                 <Text variant="label5" as="p">
-                  AI-powered training for confident presentations. Employees can
-                  practice, refine, and deliver with impact — anytime.
+                  AI-powered training for confident presentations. Employees can practice, refine, and deliver with impact — anytime.
                 </Text>
               </div>
             </div>
@@ -141,7 +137,6 @@ export const HeroSection = ({
                 <Text
                   variant="title3"
                   as="h3"
-                  className="mb-2"
                   style={{ color: 'var(--color-neutral-900, #0F0F0F)' }}
                 >
                   TeamSense
@@ -176,7 +171,6 @@ export const HeroSection = ({
                 <Text
                   variant="title3"
                   as="h3"
-                  className="mb-2"
                   style={{ color: 'var(--color-neutral-900, #0F0F0F)' }}
                 >
                   KnowledgeBase

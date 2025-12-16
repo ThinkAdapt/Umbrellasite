@@ -1,6 +1,9 @@
 import React from 'react';
 import { Text } from '@/stories/Text';
 import featuresSection1 from '@/stories/assets/features-section-1.png';
+import featuresSection2 from '@/stories/assets/features-section-2.png';
+import featuresSection3 from '@/stories/assets/features-section-3.png';
+import featuresSection4 from '@/stories/assets/features-section-4.png';
 
 export interface FeaturesSectionProps {
   /**
@@ -15,42 +18,21 @@ export const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
       id: 'integration',
       title: 'Seamless AI Integration',
       description: 'Connect easily with your existing tools. No complex setups.',
-      icon: (
-        <div className="grid grid-cols-4 gap-2 mt-4">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div
-              key={i}
-              className="aspect-square bg-neutral-200 rounded-lg"
-            ></div>
-          ))}
-        </div>
-      ),
+      image: featuresSection2,
     },
     {
       id: 'simplicity',
       title: 'One-Tap Simplicity',
       description:
         'Employees can access everything they need with a single tap.',
-      icon: (
-        <div className="flex items-end gap-2 mt-4 h-20">
-          <div className="flex-1 bg-neutral-200 rounded-lg h-12"></div>
-          <div className="flex-1 bg-neutral-200 rounded-lg h-16"></div>
-          <div className="flex-1 bg-neutral-200 rounded-lg h-8"></div>
-        </div>
-      ),
+      image: featuresSection3,
     },
     {
       id: 'analytics',
       title: 'Real-Time Analytics',
       description:
         'Track workplace satisfaction and performance instantly with AI-driven reports.',
-      icon: (
-        <div className="flex items-end gap-2 mt-4 h-20">
-          <div className="w-8 bg-neutral-200 rounded-lg h-16"></div>
-          <div className="flex-1 bg-neutral-200 rounded-lg h-10"></div>
-          <div className="flex-1 bg-neutral-200 rounded-lg h-14"></div>
-        </div>
-      ),
+      image: featuresSection4,
     },
   ];
 
@@ -78,10 +60,8 @@ export const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
               as="p"
               className="text-neutral-700 text-justify max-w-[30rem] ml-auto"
             >
-              Unlike traditional tools that only speed up tasks, SopranoAI
-              focuses on both efficiency and employee well-being. Our AI-powered
-              features integrate smoothly into daily workflows, boosting
-              satisfaction and performance across your organization.
+              Unlike traditional tools that only speed up tasks, SopranoAI focuses on both efficiency and employee well-being. Our 
+              AI-powered features integrate smoothly into daily workflows, boosting satisfaction and performance across your organization.
             </Text>
           </div>
         </div>
@@ -109,8 +89,12 @@ export const FeaturesSection = ({ onCTAClick }: FeaturesSectionProps) => {
                   {feature.description}
                 </Text>
               </div>
-              <div className={`mt-auto ${index === 1 ? 'flex justify-end' : index === 2 ? 'flex justify-start' : ''}`}>
-                {feature.icon}
+              <div className={`mt-auto ${index === 1 ? 'flex justify-end pl-6' : index === 2 ? 'flex justify-start pr-6' : ''} ${index === 0 ? 'px-6 pb-6' : ''}`}>
+                <img
+                  src={typeof feature.image === 'string' ? feature.image : feature.image.src}
+                  alt={feature.title}
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </div>
           ))}

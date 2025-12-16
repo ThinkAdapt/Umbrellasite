@@ -21,7 +21,7 @@ export const ProductsSection = ({
       id: 'teamsense',
       title: 'TeamSense',
       description:
-        'Measure and improve employee satisfaction, motivation, and overall workplace engagement. With simple one-click surveys and real-time analytics, TeamSense helps leaders understand their teams and make company-wide decisions with confidence.',
+        'Current state of employee feedback mechanisms is bureaucracy at best. TeamSense disrupts talent feedback in organizations. Measure and improve employee satisfaction, motivation, and overall workplace engagement. With simple one-click surveys and real-time analytics, TeamSense helps leaders understand their teams and make company-wide decisions with confidence.',
       visual: 'dashboard',
       gradient: null,
     },
@@ -29,7 +29,7 @@ export const ProductsSection = ({
       id: 'stageready',
       title: 'StageReady',
       description:
-        'Transform presentation preparation into a structured learning process. Employees can practice their presentations, identify areas for improvement, and receive AI-driven feedback — helping them present with clarity, confidence, and impact.',
+        'Trainings are easy-peasy. Just give your context and employees can practice their presentations, identify areas for improvement, receive AI-driven feedback — helping them to be their best with clarity, confidence, and impact.',
       visual: 'flowchart',
       gradient: 'from-purple-100 to-pink-50',
     },
@@ -37,7 +37,7 @@ export const ProductsSection = ({
       id: 'knowledgebase',
       title: 'KnowledgeBase',
       description:
-        "Your company's AI-powered knowledge assistant. KnowledgeBase gives employees instant access to policies, procedures, and documented answers to workplace questions, reducing time spent searching for information and ensuring consistency across the organization.",
+        "Your company’s AI-powered knowledge assistant. KnowledgeBase gives employees instant access to policies, procedures, and documented answers to workplace questions, reducing time spent searching for information and ensuring consistency across the organization.",
       visual: 'chat',
       gradient: 'from-green-100 to-emerald-50',
     },
@@ -223,7 +223,7 @@ export const ProductsSection = ({
             className="rounded-3xl border-2 border-[#F46429] bg-[rgba(254,240,234,0.85)] backdrop-blur-[10px] pt-8 pl-8 pb-0 pr-0 h-[472px] overflow-hidden cursor-pointer transition-colors duration-200"
             onClick={() => onProductClick?.('teamsense')}
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start h-full">
               <div>
                 <Text
                   variant="headline1"
@@ -240,18 +240,12 @@ export const ProductsSection = ({
                   {products[0].description}
                 </Text>
               </div>
-              <div className="h-[500px] overflow-visible rounded-2xl border border-neutral-200 bg-[var(--color-neutral-10,#FAFAFA)] p-4 relative">
-                <div className="absolute h-[600px] overflow-hidden rounded-lg border border-neutral-200 bg-gray-300 left-4 top-4">
-                  <img
-                    src={typeof productsSection1 === 'string' ? productsSection1 : productsSection1.src}
-                    alt="TeamSense"
-                    className="h-full object-cover"
-                    style={{
-                      objectPosition: '-0.642px -40.783px',
-                      minWidth: 'calc(100% + 1rem)',
-                    }}
-                  />
-                </div>
+              <div className="h-full w-auto overflow-visible relative flex items-end justify-end">
+                <img
+                  src={typeof productsSection1 === 'string' ? productsSection1 : productsSection1.src}
+                  alt="TeamSense"
+                  className="h-full w-auto"
+                />
               </div>
             </div>
           </div>
