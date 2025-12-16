@@ -43,7 +43,7 @@ export const HeroSection = ({
           >
             Contact Us
           </Button>
-          <Button
+          {/* <Button
             variant="secondary"
             size="large"
             iconPosition="none"
@@ -52,7 +52,7 @@ export const HeroSection = ({
             onClick={onExploreProductsClick}
           >
             Explore Products
-          </Button>
+          </Button> */}
         </div>
       </section>
 
